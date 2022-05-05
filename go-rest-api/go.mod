@@ -10,5 +10,5 @@ require (
     github.com/go-openapi/strfmt v0.20.0
     github.com/go-openapi/swag v0.19.13
     github.com/jessevdk/go-flags v1.5.0
-    golan.org/x/net v0.0.0-20210119194325-5f4716e94777
+    golang.org/x/net v0.0.0-20210119194325-5f4716e94777
 )
