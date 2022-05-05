@@ -36,7 +36,7 @@ func main() {
 
 	api.GetHelloUserHandler = operations.GetHelloUserHandlerFunc(GetHelloUser)
 
-	api.getGopherNameHandler = operations.GetGopherNameHandlerFunc(GetGopherByName)
+	api.GetGopherNameHandler = operations.GetGopherNameHandlerFunc(GetGopherByName)
 
 	// Start listening
 	if err := server.Serve(); err != nil {
@@ -59,10 +59,10 @@ func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder
 	var URL string
 
 	if gopher.Name != "" {
-		URL = "https://github.com/scraly/gophers/raw/main" + gopher.Name + ".png"
+		URL = "https://raw.githubusercontent.com/scraly/gophers/main/" + gopher.Name + ".png"
 	} else {
 		// returns dr who gopher by default
-		URL = "https://github.com/scraly/gopher/dr-who.png"
+		URL = "https://raw.githubusercontent.com/scraly/gophers/main/dr-who.png"
 	}
 
 	response, err := http.Get(URL)
