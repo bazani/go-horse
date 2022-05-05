@@ -13,5 +13,9 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Osx
+.DS_Store
+
 # ignores the bin folder contents
 /go-rest-api/bin
