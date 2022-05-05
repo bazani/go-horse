@@ -13,3 +13,5 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+# ignores the bin folder contents
+/go-rest-api/bin
